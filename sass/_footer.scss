@@ -1,0 +1,47 @@
+.footer{
+    padding: 1em;
+    background: rgba(0,0,0,0.8);
+    &__case{
+        @include max-width(1000);
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(165px,1fr));
+        &__logo{
+            font-size: 1.6em;
+            font-weight: 600;
+            padding: 0.6em 0;
+            color: rgba(255,255,255,0.8);
+            letter-spacing: 1.5px;
+        }
+        &__menu{
+            display: flex;
+            flex-direction: column;
+            gap: 0.6em;
+            padding: 0.6em 0;
+            p{
+                color: rgba(255,255,255,0.5);
+            }
+            &__items{
+                display: flex;
+                flex-direction: column;
+                gap: 0.6em;
+                a{
+                    color: rgba(255,255,255,0.8);    
+                }
+            }
+        }
+        &__icons{
+            display: flex;
+            justify-content: space-between;
+            padding: 0.6em 0;
+            i{
+                color: rgba(255,255,255,0.8);
+            }
+        }
+        @include media(382){
+            gap: 0.6em;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}
